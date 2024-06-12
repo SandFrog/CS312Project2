@@ -4,18 +4,14 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 4.16"
     }
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "3.0.2"
-    }
 
   }
 
   required_version = ">= 1.2.0"
 }
-provider "docker" {}
 provider "aws" {
   region  = "us-west-2"
+  shared_credentials_files = ["~/.aws/credentials"]
 }
 
 resource "aws_security_group" "minecraft_security_group" {
@@ -35,7 +31,14 @@ resource "aws_security_group" "minecraft_security_group" {
   }
 }
 
-resource "docker_image" "minecraft_docker" {
 
-  name              = "itzg/minecraft-server"
+resource "aws_instance" "minecraft_server" {
+  ami           = "ami-03c983f9003cb9cd1"
+  instance_type = "t2.medium"
+  vpc_security_group_ids = ["${aws_security_group.minecraft_security_group.id}"]
+
+  tags = {
+    Name = var.instance_name
+  }
 }
+

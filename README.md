@@ -10,3 +10,4 @@
 # How to Set Up:
 
 # Resources Used:
+For how to set up security groups: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group.html
