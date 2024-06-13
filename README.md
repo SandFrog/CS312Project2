@@ -1,6 +1,6 @@
 # CS-312 Project 2
 # Background:
-> This repo assumes you're running Ubuntu, these instructions will not work for Microsoft Windows. (This guide has been tested on Ubuntu 22.04 & 24.04)
+> This repo assumes you're running Ubuntu, these instructions may work for other distros with minor changes. These instructions will not work for Microsoft Windows. (This guide has been tested on Ubuntu 22.04 & 24.04)
 
 This repo sets up an EC2 instance through terraform, and then uses ansible to establish a Minecraft server through the EC2 instance.
 
@@ -25,7 +25,7 @@ graph TD;
 
 # How to Provision AWS:
 
-1. First We'll want to clone this repo, you can do that by issuing the command `cd ~/Documents && git clone https://github.com/SandFrog/cs312project2.git && cd cs312project2` to get started.
+1. First We'll want to clone this repo, you can do that by issuing the command `cd ~/Documents && git clone https://github.com/SandFrog/cs312project2.git && cd cs312project2`.
 2.  Next we'll need to `chmod +x ./setup.sh` in order allow execution of the setup script.
 3. Now we can run `./setup.sh` in order to install the required tools.
 
@@ -36,9 +36,10 @@ graph TD;
 6. Run the commands `terraform init` and `terraform apply` in order to provision our machine with AWS.
 7. The apply command should output the public IP of our new EC2 instance, we'll need to add that to our ansible config, change the file with `sudo nano /etc/ansible/hosts`. Replace `YOURIPHERE` with the IP of the instance.
 8. Now we can use ansible to set up our server with the command `ansible-playbook playbook.yml`. This will take a minute!
-9. You should be set, enjoy!
+9. You should be set, enjoy your new Minecraft server!
 
 # Resources Used:
-- For how to set up security groups: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group.html
-- For how to output the IP of the instance:
-https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-outputs
+- [Terraform tutorial](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build)
+- [Resource on security groups](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group.html)
+- [How to output a public IP](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-outputs)
+- [General Ansible documentation](https://docs.ansible.com/)
