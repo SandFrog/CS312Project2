@@ -1,6 +1,6 @@
 # CS-312 Project 2
 # Background:
-> This repo assumes you're running Linux, these instructions will not work for Microsoft Windows. (This guide has been tested on Ubuntu 22.04 & 24.04)
+> This repo assumes you're running Ubuntu, these instructions will not work for Microsoft Windows. (This guide has been tested on Ubuntu 22.04 & 24.04)
 
 This repo sets up an EC2 instance through terraform, and then uses ansible to establish a Minecraft server through the EC2 instance.
 
