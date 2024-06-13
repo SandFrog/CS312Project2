@@ -8,7 +8,8 @@ The focus of this repo is to provide
 graph TD;
     ThisComputer-->Terraform;
     ThisComputer-->Ansible;
-    Terraform-->Ansible;
+    Terraform-->EC2;
+    Ansible-->EC2;
     Ansible-->Minecraft;
 ```
 
