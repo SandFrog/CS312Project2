@@ -1,4 +1,4 @@
-# CS-312 Course Project Part 2
+# CS-312 Project 2
 
 # Requirements:
 - Ansible
@@ -9,7 +9,8 @@
 
 # How to Set Up:
 
-1. run the command `ssh-keygen`. Once it asks you for a name, enter `minecraft`.
+1. First We'll want to clone this repo, you can do that by issuing the command `` into the directory you want the repo to go into
+2.  run the command `ssh-keygen`. Once it asks you for a name, enter `minecraft`.
 2. 
 # Resources Used:
 For how to set up security groups: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group.html
