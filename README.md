@@ -48,5 +48,5 @@ Now that our computer is set up, we'll need to create our EC2 with Terraform and
 - [Terraform tutorial](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build)
 - [Resource on security groups](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group.html)
 - [How to output a public IP](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-outputs)
-- Also huge thanks to [this](https://github.com/hashicorp/terraform/issues/2164) github issue, I could not figure out how to attach the security group until I found this. THANK YOU!
+- Also huge thanks to [this](https://github.com/hashicorp/terraform/issues/2164) github issue, I could not figure out how to attach the security group until I read this. THANK YOU!
 - [General Ansible documentation](https://docs.ansible.com/)
