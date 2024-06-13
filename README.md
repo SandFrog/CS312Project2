@@ -1,13 +1,13 @@
 # CS-312 Project 2
 # Background:
-- Note: This repo assumes you're running linux, these instructions will not work for Microsoft Windows
+> This repo assumes you're running Linux, these instructions will not work for Microsoft Windows. (This guide has been tested on Ubuntu 22.04 & 24.04)
 
-The focus of this repo is to provide 
+The focus of this repo is to set up an EC2 instance through terraform, and then to use ansible to establish a Minecraft server through the EC2 instance.
 
 ```mermaid
 graph TD;
-    ThisComputer-->Terraform;
-    ThisComputer-->Ansible;
+    A[Your Computer]-->Terraform;
+    A[Your Computer]-->Ansible;
     Terraform-->EC2;
     Ansible-->EC2;
     EC2-->Minecraft;
@@ -22,8 +22,6 @@ graph TD;
 
 - An AWS account
 - Money for your AWS account
-
-> This guide assumes you're on Ubuntu (this was tested on Ubuntu 22.04 & 24.04)
 
 # How to Provision AWS:
 
