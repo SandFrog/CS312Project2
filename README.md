@@ -23,7 +23,7 @@ graph TD;
 - An AWS account
 - Money for your AWS account
 
-# How to Provision AWS:
+## How to Setup Our Computer:
 
 1. First We'll want to clone this repo, you can do that by issuing the command `cd ~/Documents && git clone https://github.com/SandFrog/cs312project2.git && cd cs312project2`.
 2.  Next we'll need to `chmod +x ./setup.sh` in order allow execution of the setup script.
@@ -33,10 +33,15 @@ graph TD;
 
 4. Run the command `ssh-keygen`. Once it asks you for a name, enter `minecraft` the other entries can be left blank.
 5. Copy your AWS credentials into `~/.aws/credentials`
-6. Run the commands `terraform init` and `terraform apply` in order to provision our machine with AWS.
-7. The apply command should output the public IP of our new EC2 instance, we'll need to add that to our Ansible config, change the file with `sudo nano /etc/ansible/hosts`. Replace `YOURIPHERE` with the IP of the instance.
-8. Now we can use Ansible to set up our server with the command `ansible-playbook playbook.yml`. This will take a minute!
-9. You should be set, enjoy your new Minecraft server!
+
+## How to Provision Our EC2 Instance: 
+Now that our computer is set up, we'll need to create our EC2 with Terraform and set up our Minecraft server with Ansible.
+
+
+1. Run the commands `terraform init` and `terraform apply` in order to provision our machine with AWS.
+2. The apply command should output the public IP of our new EC2 instance, we'll need to add that to our Ansible config, change the file with `sudo nano /etc/ansible/hosts`. Replace `YOURIPHERE` with the IP of the instance.
+3. Now we can use Ansible to set up our server with the command `ansible-playbook playbook.yml`. This will take a minute!
+4. You should be set, enjoy your new Minecraft server!
 
 # Resources Used:
 - [Terraform tutorial](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build)
