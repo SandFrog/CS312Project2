@@ -2,7 +2,7 @@
 # Background:
 > This repo assumes you're running Linux, these instructions will not work for Microsoft Windows. (This guide has been tested on Ubuntu 22.04 & 24.04)
 
-The focus of this repo is to set up an EC2 instance through terraform, and then to use ansible to establish a Minecraft server through the EC2 instance.
+This repo sets up an EC2 instance through terraform, and then uses ansible to establish a Minecraft server through the EC2 instance.
 
 ```mermaid
 graph TD;
@@ -34,7 +34,8 @@ graph TD;
 4. Run the command `ssh-keygen`. Once it asks you for a name, enter `minecraft` the other entries can be left blank.
 5. Copy your AWS credentials into `~/.aws/credentials`
 6. Run the commands `terraform init` and `terraform apply` in order to provision our machine with AWS.
-7. Run the command `
+7. The apply command should output the public IP of our new EC2 instance, we'll need to add that to our ansible config, change the file with `sudo nano /etc/ansible/hosts`. Replace `YOURIPHERE` with the IP of the instance.
+8. Now we can use ansible to set up our server with the command `ansible-playbook playbook.yml`. This will take a minute!
 
 # How to Provision Your Machine:
 # Resources Used:

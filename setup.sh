@@ -8,4 +8,4 @@ sudo apt update && sudo apt install terraform
 mkdir ~/.aws
 touch ~/.aws/credentials
 sudo mkdir /etc/ansible
-printf "[minecraft_server]\n54.188.72.102 ansible_user=ubuntu ansible_ssh_private_key_file=/home/$USER/Documents/cs312project2/minecraft" | sudo tee /etc/ansible/hosts
+printf "[minecraft_server]\nYOURIPHERE ansible_user=ubuntu ansible_ssh_private_key_file=/home/$USER/Documents/cs312project2/minecraft" | sudo tee /etc/ansible/hosts
