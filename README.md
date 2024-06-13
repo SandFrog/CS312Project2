@@ -6,8 +6,8 @@ The focus of this repo is to provide
 
 ```mermaid
 graph TD;
-    Your Computer-->Terraform;
-    Your Computer-->Ansible;
+    ThisComputer-->Terraform;
+    ThisComputer-->Ansible;
     Terraform-->Ansible;
     Ansible-->Minecraft;
 ```
