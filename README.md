@@ -10,6 +10,7 @@ graph TD;
     ThisComputer-->Ansible;
     Terraform-->EC2;
     Ansible-->EC2;
+    EC2-->Minecraft;
     Ansible-->Minecraft;
 ```
 
