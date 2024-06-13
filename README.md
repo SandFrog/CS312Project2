@@ -28,9 +28,9 @@ graph TD;
 
 1. First We'll want to clone this repo, you can do that by issuing the command `cd ~/Documents && git clone https://github.com/SandFrog/cs312project2.git && cd cs312project2`.
 2.  Next we'll need to `chmod +x ./setup.sh` in order allow execution of the setup script.
-3. Now we can run `./setup.sh` in order to install the required tools.
+3. Now we can run `./setup.sh` in order to install the required tools and set up some needed directories & files.
 
-> Note: Please read through these scripts, don't just trust some bash script someone put on the internet!
+> Note: Please read through these scripts, don't just trust some bash script someone put on the internet! Especially double check an internet bash script that asks for root access!
 
 4. Run the command `ssh-keygen`. Once it asks you for a name, enter `minecraft` the other entries can be left blank.
 5. Copy your AWS credentials into `~/.aws/credentials`
