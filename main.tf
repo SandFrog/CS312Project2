@@ -48,7 +48,7 @@ resource "aws_instance" "minecraft_server" {
   key_name 	= aws_key_pair.public_key.key_name
   vpc_security_group_ids = ["${aws_security_group.minecraft_security_group.id}"]
   tags = {
-    Name = "MinecraftServerInstance"
+    Name = "Minecraft_Server_Instance"
   }
 }
 

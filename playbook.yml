@@ -6,9 +6,9 @@
   become_method: sudo
 
   tasks:
-  - name: apt update
-    raw: apt update
   - name: install docker
     raw: snap install docker
+  - name: sleep (it doesn't work if I don't do this)
+    raw: sleep 20
   - name: install minecraft container
     raw: docker run -d --restart=always -e EULA=TRUE -p 25565:25565 --name mc itzg/minecraft-server
