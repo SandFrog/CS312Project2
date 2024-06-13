@@ -6,10 +6,10 @@ The focus of this repo is to provide
 
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    Your Computer-->Terraform;
+    Your Computer-->Ansible;
+    Terraform-->Ansible;
+    Ansible-->Minecraft;
 ```
 
 # Requirements:
